@@ -1,0 +1,275 @@
+@import "../vendor/vendor.styl";
+
+h5
+  margin: 0
+
+body
+  font-family: 'Open Sans', sans-serif;
+
+header, .b-main-container
+  width: 100%
+
+.b-main-container
+  background-color: main_bgc
+
+.b-central-wrap
+  width: 1175px
+  margin: 0 auto
+  position: relative
+  @media (max-width: 1175px)
+    width: 100%
+
+.b-central-wrap_header
+  @extend $flex-center
+  justify-content: space-between
+
+.b-header {
+  height: 60px
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+
+  &__main-logo {
+    height: 39px
+  }
+  &__nav {
+    height: 60px
+    @extend $flex-center
+
+
+  }
+  &__menu {
+    padding-left: 0
+    list-style-type none
+    margin-left: (55 - 12) px
+  }
+  &__nav-list {
+    display: inline-block
+    font-size 14px
+    font-weight: 600
+  }
+  &__nav-link {
+    color: black
+    text-decoration none
+    text-transform uppercase
+    padding: 20px 12px
+    &:hover {
+      background-color: #f5f5f5
+    }
+    &:active {
+      padding-bottom: 17px
+      border-bottom: 3px solid blue_color
+    }
+  }
+
+}
+
+.b-user-info {
+  @extend $flex-center
+  height: 60px
+
+  &__balls-count {
+    @extend $flex-center
+    height: 60px
+  }
+  &__full-info {
+    @extend $flex-center
+    @extend $flex-justify
+    width: 146px;
+    height: 60px
+    cursor: pointer
+    &:hover{
+      background-color: #f5f5f5
+    }
+  }
+  &__icon{
+    margin-right: 8px
+  }
+  &__notice {
+    margin-right: 5px
+    padding-bottom: 5px
+    font-size: 16px
+    font-weight: 600
+    background-image: url('../images/notice.png')
+    background-repeat: no-repeat
+    width: 58px;
+    height: 40px;
+    @extend $flex-center
+    @extend $flex-justify
+    & span {
+      padding-left: (58 - 51) px
+    }
+
+  }
+  &__btn {
+    @extend $blind-btn
+    width: 80px
+    font-size 14px
+    font-weight 400
+    background-image: url('../images/info-btn_icon.png')
+    background-repeat: no-repeat
+    background-position: 71px 10px
+  }
+  &__notification{
+    margin-left: 25px
+    cursor: pointer;
+  }
+}
+
+.b-course{
+  padding-top: 26px
+  &:last-child{
+    padding-bottom: 120px
+  }
+
+  &__block{
+    width: 100%
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    background-color: white
+  }
+  &__block_active{
+    border: solid 1px #4cba76;
+    box-shadow: none
+  }
+  &__line-row{
+    @extend $flex-center
+    padding: 10px 40px
+  }
+  &__time-date-section{
+    width: 200px
+  }
+  &__info-section{
+    width: 400px
+  }
+  &__btn-section{
+    width: 400px
+    @extend $flex-center
+    justify-content: flex-end
+  }
+  &__user-pic{
+    background: url('../images/user-pic.png') no-repeat
+    background-size cover
+    margin-right: 13px
+
+  }
+  &__user-pic_original{
+    width: 80px;
+    height: 80px;
+
+  }
+  &__user-pic_big{
+    width: 120px;
+    height: 120px;
+  }
+  &__author-name{
+    margin: 10px 0
+  }
+  &__title{
+    @extend $bold-text
+    margin-bottom: 20px
+  }
+  &__date{
+    @extend $bold-text
+  }
+  &__time{
+    @extend $thin-text
+  }
+  &__course-link{
+    @extend $blue-link
+  }
+  &__category{
+    font-size 12px
+    font-weight 400
+    @extend $default-link
+    @extend $flex-center
+
+  }
+  &__category-icon_general{
+    @extend $category-general
+  }
+  &__category-icon_individual{
+    @extend $category-individual
+  }
+  &__btn_green{
+    @extend $green-btn
+  }
+  &__btn_grey{
+    @extend $grey-btn
+  }
+  &__btn_blue{
+    @extend $blue-btn
+  }
+  &__course-link_more-info{
+    margin-left: 30px
+  }
+  &__noticed-btn{
+    @extend $canceled-btn
+  }
+  &__line-row_multy{
+    border-bottom: 1px solid #e4e4e4
+  }
+  &__btn_cancel{
+    @extend $special-btn
+    background-image: url('../images/cross-icn.png')
+    background-position: 20px 17px
+  }
+  &__btn_watching{
+    @extend $watching-btn
+    background-image: url('../images/grey-arr-icn.png')
+
+  }
+  &__live-stream{
+    @extend $watching-btn
+    background-image: url('../images/white-arr-icn.png')
+
+  }
+}
+.b-popup_hiden{
+  display none
+  position: absolute
+  top 70px
+  right 43px
+  background-color: #fff;
+  width: 147px;
+  height: 113px;
+  border-radius: 5px;
+  border: solid 1px #cfccc7;
+  box-shadow: 0 6px 8px rgba(0,0,0,.15);
+  z-index: 10
+
+  &__menu{
+    padding: 0
+    margin: 0
+    list-style-type none
+  }
+  &__list{
+    &:first-child{
+      padding: 10px 0 10px 20px
+    }
+    &:nth-child(2){
+      padding: 0 0 10px 20px
+
+    }
+    &:last-child{
+      padding: 5px 0 10px 20px
+      @extend $flex-center
+
+    }
+  }
+  &__list_underline{
+    border-bottom: 1px solid grey_color
+  }
+  &__link{
+    @extend $default-link
+    font-size 14px
+    color: black
+
+  }
+  &__icon{
+    width: 15px
+    height: 15px
+    display: inline-block
+    background-repeat:no-repeat
+    background-image: url('../images/sub-header-icn.png')
+    margin-left: 10px
+  }
+}

@@ -1,0 +1,107 @@
+// vars
+
+main_bgc = #f2ece4
+green_color = #4cba76
+blue_color = #32b4df
+grey_color = #fbf9f6
+darkgrey_color = #b3aeaa
+
+// common patterns
+
+$bold-text
+  font-weight 600
+  font-size 16px
+$bold-text_white
+  @extend $bold-text
+  color white
+
+$thin-text
+  font-weight 300
+  font-size 15px
+
+// links
+$default-link
+  text-decoration none
+  &:hover{
+    text-decoration: underline
+  }
+$blue-link
+  @extend $thin-text
+  @extend $default-link
+  color: blue_color
+
+// buttons
+
+$default-btn
+  border none
+  outline none
+$blind-btn{
+  @extend $default-btn
+  background-color: transparent
+}
+$canceled-btn{
+  @extend $default-btn
+  @extend $thin-text
+  background-color: darkgrey_color
+  color: white
+}
+
+$big-btn
+  @extend $default-btn
+  color: white
+  border-radius: 4px;
+  padding 12px 20px
+  margin-left: 10px
+
+$green-btn
+  border: solid 1px #36a661;
+  @extend $big-btn
+  background-color: green_color
+  @extend $bold-text
+$grey-btn
+  @extend $big-btn
+  background-color: grey_color
+  @extend $bold-text
+  color: black
+  border: solid 1px #cfccc7;
+
+$blue-btn
+  @extend $big-btn
+  background-color: blue_color
+  @extend $bold-text
+  border: solid 1px #2e9dc0;
+$special-btn
+  padding-left: 45px
+  background-repeat:no-repeat
+$watching-btn
+  @extend $special-btn
+  background-position: 20px 15px
+
+
+
+// flex common rules
+
+$flex-center
+  display: flex
+  align-items: center
+$flex-justify
+  justify-content: center
+
+//
+
+$category-icon
+  margin-right: 10px
+  display: inline-block
+  background-repeat:no-repeat
+  height: 15px
+
+$category-general
+  @extend $category-icon
+  width: 17px
+  background-image: url('../images/general-icon.png')
+$category-individual
+  @extend $category-icon
+  width: 11px
+  background-image: url('../images/category-ind.png')
+
+

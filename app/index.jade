@@ -1,0 +1,227 @@
+doctype html
+html.no-js
+  head
+    meta(charset='utf-8')
+    title My Webapp
+    meta(name='description' content='')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='apple-touch-icon' href='apple-touch-icon.png')
+    // Place favicon.ico and apple-touch-icon.png in the root directory
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,300italic,600italic,300&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css')
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet' href='../bower_components/normalize-css/normalize.css')
+    // endbower
+    // endbuild
+
+    // build:css styles/main.css
+    link(rel='stylesheet' href='styles/main.css')
+    // endbuild
+
+
+  body
+    | <!--[if lt IE 10]>
+    |   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    | <![endif]-->
+
+
+    header.b-header
+      .b-central-wrap.b-central-wrap_header
+        nav.b-header__nav
+          a.b-header__main-logo(href="#")
+            img(src="images/main-logo.png")
+          ul.b-header__menu
+            li.b-header__nav-list
+              a.b-header__nav-link(href="#") курсы
+            li.b-header__nav-list
+              a.b-header__nav-link(href="#") вебинары
+        .b-user-info
+          .b-user-info__balls-count
+            .b-user-info__icon
+              img(src="images/info-icon.png")
+            .b-user-info__notice
+              span 870
+
+          .b-user-info__full-info
+            .b-popup_hiden
+              ul.b-popup_hiden__menu
+                li.b-popup_hiden__list
+                  a.b-popup_hiden__link(href="#") Настройки
+                li.b-popup_hiden__list.b-popup_hiden__list_underline
+                  a.b-popup_hiden__link(href="#") Помощь
+                li.b-popup_hiden__list
+                  a.b-popup_hiden__link(href="#") Выход
+                  i.b-popup_hiden__icon
+
+
+            .b-user-info__picture
+              img(src="images/user-info-pic.png")
+            .b-user-info__name
+              button.b-user-info__btn Андрей
+
+
+          .b-user-info__notification
+            img(src="images/notification.png")
+
+
+
+    .b-main-container
+      .b-central-wrap
+        .b-course.b-course-active
+          h5.b-course__title Active
+          .b-course__block.b-course__block_active
+            .b-course__line-row.b-course__line-row_active
+              .b-course__time-date-section
+                p.b-course__date 20 апреля 2015
+                p.b-course__time  14:00 — 15:00
+              .b-course__user-pic.b-course__user-pic_original
+
+              .b-course__info-section
+                a.b-course__course-link(href="#") Разбираем четвертый блок курса вместе...
+                p.b-course__author-name Lori
+                a.b-course__category(href="#")
+                  i.b-course__category-icon_general
+                  span General English
+
+              .b-course__btn-section
+                button.b-course__btn.b-course__btn_green Участвовать
+                button.b-course__btn.b-course__btn_grey.b-course__btn_cancel Отказаться
+                a.b-course__course-link.b-course__course-link_more-info(href="#") Подробнее
+
+        .b-course.b-course-finished
+          h5.b-course__title Finished
+          .b-course__block.b-course-finished__block
+            .b-course__line-row
+              .b-course__time-date-section
+                p.b-course__date 12 апреля 2015
+                p.b-course__time  14:00 — 15:00
+              .b-course__user-pic.b-course__user-pic_original
+
+              .b-course__info-section
+                a.b-course__course-link(href="#") Разбираем четвертый блок курса вместе...
+                p.b-course__author-name Lori
+                a.b-course__category(href="#")
+                  i.b-course__category-icon_general
+                  span General English
+
+              .b-course__btn-section
+                button.b-course__btn.b-course__btn_grey.b-course__btn_watching Посмотреть запись
+                a.b-course__course-link.b-course__course-link_more-info(href="#") Подробнее
+
+
+
+        .b-course.b-course-canceled
+          h5.b-course__title Canceled
+          .b-course__block.b-course-canceled__block
+            .b-course__line-row
+              .b-course__time-date-section
+                p.b-course__date 18 апреля 2015
+                p.b-course__time  14:00 — 15:00
+              .b-course__user-pic.b-course__user-pic_original
+
+              .b-course__info-section
+                a.b-course__course-link(href="#") Разбираем четвертый блок курса вместе...
+                p.b-course__author-name Lori
+                a.b-course__category(href="#")
+                  i.b-course__category-icon_general
+                  span General English
+
+              .b-course__btn-section
+                button.b-course__noticed-btn Отменен
+                a.b-course__course-link.b-course__course-link_more-info(href="#") Подробнее
+
+
+        .b-course.b-course-list
+          h5.b-course__title List
+          .b-course__block.b-course-list__block
+            .b-course__line-row.b-course__line-row_multy
+              .b-course__time-date-section
+                p.b-course__date 20 апреля 2015
+                p.b-course__time  14:00 — 15:00
+              .b-course__user-pic.b-course__user-pic_big
+
+              .b-course__info-section
+                a.b-course__course-link(href="#") Разбираем четвертый блок курса вместе...
+                p.b-course__author-name Lori
+                a.b-course__category(href="#")
+                  i.b-course__category-icon_general
+                  span General English
+
+              .b-course__btn-section
+                button.b-course__btn.b-course__btn_blue.b-course__live-stream Перейти к просмотру
+                a.b-course__course-link.b-course__course-link_more-info(href="#") Подробнее
+
+
+
+
+
+            .b-course__line-row.b-course__line-row_multy
+              .b-course__time-date-section
+                p.b-course__date 26 апреля 2015
+                p.b-course__time  20:00 — 21:00
+              .b-course__user-pic.b-course__user-pic_original
+
+              .b-course__info-section
+                a.b-course__course-link(href="#") Разбираем пятый блок курса вместе...
+                p.b-course__author-name Lori
+                a.b-course__category(href="#")
+                  i.b-course__category-icon_general
+                  span General English
+
+              .b-course__btn-section
+                a.b-course__course-link.b-course__course-link_more-info(href="#") Подробнее
+
+
+
+
+
+            .b-course__line-row.b-course__line-row_multy
+              .b-course__time-date-section
+                p.b-course__date 2 мая 2015
+                p.b-course__time  14:00 — 15:00
+              .b-course__user-pic.b-course__user-pic_original
+
+              .b-course__info-section
+                p.b-course__author-name Lori
+                a.b-course__category(href="#")
+                  i.b-course__category-icon_individual
+                  span Индивидуальный
+
+              .b-course__btn-section
+                a.b-course__course-link.b-course__course-link_more-info(href="#") Подробнее
+
+
+
+
+
+            .b-course__line-row.b-course__line-row_multy
+              .b-course__time-date-section
+                p.b-course__date 5 мая 2015
+                p.b-course__time  18:00 — 19:00
+              .b-course__user-pic.b-course__user-pic_original
+
+              .b-course__info-section
+                a.b-course__course-link(href="#") Разбираем шестой блок курса вместе...
+                p.b-course__author-name Lori
+                a.b-course__category(href="#")
+                  i.b-course__category-icon_general
+                  span General English
+
+              .b-course__btn-section
+                a.b-course__course-link.b-course__course-link_more-info(href="#") Подробнее
+
+
+
+
+
+    // build:js scripts/vendor.js
+    // bower:js
+    // endbower
+    // endbuild
+
+    // build:js scripts/plugins.js
+    // endbuild
+
+    // build:js scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild
